@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos Responsivos</title>
+    <style>
+        /* Define a largura da área de visualização como 100% da largura da tela */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden; /* Evita barras de rolagem indesejadas */
+        }
+
+        /* Define o contêiner dos vídeos */
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Espaço entre os vídeos */
+            width: 90%;
+            max-width: 900px; /* Define uma largura máxima confortável para o contêiner dos vídeos */
+        }
+
+        /* Define o estilo dos vídeos e iframes */
+        .video-container iframe,
+        .video-container video {
+            width: 100%;
+            max-width: 300px; /* Define uma largura máxima confortável para os vídeos */
+            aspect-ratio: 9 / 16; /* Mantém a proporção vertical dos vídeos */
+            height: auto; /* Mantém a proporção original do vídeo */
+            border: 1px solid #ccc; /* Opcional: adiciona uma borda ao redor dos vídeos */
+            background-color: black; /* Garante que a área não ocupada do vídeo tenha uma cor de fundo */
+        }
+
+        /* Consultas de mídia para telas menores */
+        @media (max-width: 600px) {
+            .video-container {
+                flex-direction: column; /* Empilha os vídeos verticalmente em telas pequenas */
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <!-- Primeiro vídeo do YouTube incorporado -->
+        <iframe src="https://www.youtube.com/embed/uAgbypQfXxE" 
+                title="Polea Care" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+
+        <!-- Segundo vídeo do YouTube incorporado -->
+        <iframe src="https://www.youtube.com/embed/ycrA5QQVlqo" 
+                title="Polea Care" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+
+        <!-- Terceiro vídeo do YouTube incorporado -->
+        <iframe src="https://www.youtube.com/embed/XmLHqTy30i4" 
+                title="Polea Care" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+    </div>
+</body>
+</html>
